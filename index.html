@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Game Title -->
+        <h1 class="title">Tic Tac Toe</h1>
+
+        <!-- Game Mode Selection -->
+        <div class="mode-selection" id="modeSelection">
+            <h2>Select Game Mode</h2>
+            <button class="btn" data-mode="player">Player vs Player</button>
+            <button class="btn" data-mode="ai">Player vs AI</button>
+        </div>
+
+        <!-- Player Names Input -->
+        <div class="player-input" id="playerInput" style="display: none;">
+            <div class="input-group">
+                <label for="player1">Mahmud (X)</label>
+                <input type="text" id="player1" placeholder="Enter name" maxlength="10">
+            </div>
+            <div class="input-group">
+                <label for="player2">Friend (O)</label>
+                <input type="text" id="player2" placeholder="Enter name" maxlength="10">
+            </div>
+            <button class="btn start-btn">Start Game</button>
+        </div>
+
+        <!-- Game Board -->
+        <div class="game-container" id="gameContainer" style="display: none;">
+            <div class="game-info">
+                <div class="player player1">
+                    <span class="player-name"></span>
+                    <span class="score">0</span>
+                </div>
+                <div class="player player2">
+                    <span class="player-name"></span>
+                    <span class="score">0</span>
+                </div>
+            </div>
+
+            <div class="board" id="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <div class="game-controls">
+                <button class="btn restart-btn">Restart Game</button>
+                <button class="btn new-game-btn">New Game</button>
+            </div>
+        </div>
+
+        <!-- Win Modal -->
+        <div class="modal" id="winModal">
+            <div class="modal-content">
+                <h2 class="win-message"></h2>
+                <div class="modal-buttons">
+                    <button class="btn play-again-btn">Play Again</button>
+                    <button class="btn return-menu-btn">Main Menu</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
